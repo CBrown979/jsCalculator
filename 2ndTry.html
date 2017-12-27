@@ -30,9 +30,11 @@
             <input type="button" value=" + " onclick="myCalculator.display.value += '+'"> <br>
             
             <input type="button" value=" 0 " onclick="myCalculator.display.value += '0'">
-            <input type="button" value=" C ">
-            <input type="button" value="CE" onclick="myCalculator.display.value = ''">
+            <input type="button" value=" . " onclick="myCalculator.display.value += '.'">
             <input type="button" value=" / " onclick="myCalculator.display.value += '/'">
+            <input type="button" value=" = " onclick="myCalculator.display.value = eval(myCalculator.display.value)"> <br>
+            <input type="button" value=" C " onclick="myCalculator.display.value = myCalculator.display.value = myCalculator.display.value.substring(0,myCalculator.display.value.length-1)">
+            <input type="button" value="CE" onclick="myCalculator.display.value = ''">
         </div>
     </div>
 </body>
