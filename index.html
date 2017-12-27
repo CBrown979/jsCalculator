@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MyCalculator</title>
+    <title>JSCalculator</title>
 </head>
 <body>
-    <h1><span id="display"></span></h1><br>
-    <button id="num7" onclick="click7()">7</button> <button id="num8">8</button> <button id="num9">9</button> <button id="divide">/</button> <br>
-    <button id="num4">4</button> <button id="num5">5</button> <button id="num6">6</button> <button id="mutiply">x</button> <br>
-    <button id="num1">1</button> <button id="num2">2</button> <button id="num3">3</button> <button id="minus">-</button> <br>
-    <button id="num0">0</button> <button id="decimal">.</button> <button id="equals">=</button> <button id="plus">+</button> <br>
-    
-    
-    
-    
-    
-    
-    <!--<h1>Display: <span id="display"></span></h1>-->
-    <!--<input type="text" id="input"/>-->
-    <!--<button id="submit">Submit Numbers</button>-->
-    <!--<button id="addDigits">Add Digits</button>-->
-    <script src="jsCalc.js"></script>
+    <div id="container">
+        <div>
+            <form name="myCalculator">
+                <input type="text" name="display" id="showCalcs">
+            </form>
+        </div>
+        <div>
+            <input type="button" value=" 7 " onclick="myCalculator.display.value += '7'">
+            <input type="button" value=" 8 " onclick="myCalculator.display.value += '8'">
+            <input type="button" value=" 9 " onclick="myCalculator.display.value += '9'">
+            <input type="button" value=" * " onclick="myCalculator.display.value += '*'"> <br>
+            
+            <input type="button" value=" 4 " onclick="myCalculator.display.value += '4'">
+            <input type="button" value=" 5 " onclick="myCalculator.display.value += '5'">
+            <input type="button" value=" 6 " onclick="myCalculator.display.value += '6'">
+            <input type="button" value=" - " onclick="myCalculator.display.value += '-'"> <br>
+            
+            <input type="button" value=" 1 " onclick="myCalculator.display.value += '1'">
+            <input type="button" value=" 2 " onclick="myCalculator.display.value += '2'">
+            <input type="button" value=" 3 " onclick="myCalculator.display.value += '3'">
+            <input type="button" value=" + " onclick="myCalculator.display.value += '+'"> <br>
+            
+            <input type="button" value=" 0 " onclick="myCalculator.display.value += '0'">
+            <input type="button" value=" . " onclick="myCalculator.display.value += '.'">
+            <input type="button" value=" / " onclick="myCalculator.display.value += '/'">
+            <input type="button" value=" = " onclick="myCalculator.display.value = eval(myCalculator.display.value)"> <br>
+            <input type="button" value=" C " onclick="myCalculator.display.value = myCalculator.display.value.substring(0,myCalculator.display.value.length-1)">
+            <input type="button" value="CE" onclick="myCalculator.display.value = ''">
+        </div>
+    </div>
 </body>
 </html>
